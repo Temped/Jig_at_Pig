@@ -1,5 +1,6 @@
 import { Countdown } from "./countdown";
 import { NeonTitle } from "./neon-title";
+import { PigSnout } from "./pig-snout";
 
 const marqueeItems = [
   "AN ADVENTURE THROUGH TIME",
@@ -51,39 +52,48 @@ export default function Home() {
           <span>Presents</span>
         </div>
 
-        {/* Hero */}
-        <div className="mt-8">
-          <NeonTitle />
-        </div>
+        {/* Hero + countdown (snout sits behind, lower) */}
+        <div className="relative mt-8">
+          <PigSnout
+            className="pointer-events-none absolute left-1/2 bottom-[15%] -translate-x-1/2 translate-y-[5%] w-[min(140vw,1144px)] text-[var(--accent-pink)] pig-snout-glow wobble z-0"
+          />
 
-        {/* Date strip */}
-        <div className="mt-10 flex flex-col items-center gap-2">
-          <div className="inline-flex items-center gap-4 rounded-full border-2 border-[var(--foreground)] bg-[var(--accent-pink)] px-6 py-2 text-black font-[family-name:var(--font-display)] text-xl sm:text-2xl">
-            <span>SAT · 6 JUNE 2026</span>
+          {/* Hero */}
+          <div className="relative z-10">
+            <NeonTitle />
           </div>
-          <div className="text-sm sm:text-base opacity-80 mt-1">
-            The Pig&apos;s Nose · East Prawle, South Devon
-          </div>
-        </div>
 
-        {/* Countdown */}
-        <div className="mt-12 mx-auto max-w-2xl">
-          <div className="text-center text-xs tracking-[0.3em] uppercase opacity-70 mb-4">
-            Time until the time machine departs
+          {/* Date strip */}
+          <div className="relative z-10 mt-10 flex flex-col items-center gap-2">
+            <div className="inline-flex items-center gap-4 rounded-full border-2 border-[var(--foreground)] bg-[var(--accent-pink)] px-6 py-2 text-black font-[family-name:var(--font-display)] text-xl sm:text-2xl">
+              <span>SAT · 6 JUNE 2026</span>
+            </div>
+            <div className="text-sm sm:text-base opacity-80 mt-1">
+              The Pig&apos;s Nose · East Prawle, South Devon
+            </div>
           </div>
-          <Countdown />
+
+          {/* Countdown */}
+          <div className="relative z-10 mt-12 mx-auto max-w-2xl">
+            <div className="text-center text-xs tracking-[0.3em] uppercase opacity-70 mb-4">
+              Time until the time machine departs
+            </div>
+            <Countdown />
+          </div>
         </div>
 
         {/* Schedule cards */}
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Card
-            color="var(--accent-yellow)"
+            color="#ffe94a"
+            glow="255,233,74"
             time="4–6 PM"
             title="Junior Rave"
             sub="By Tiny Dancers"
           />
           <Card
-            color="var(--accent-orange)"
+            color="#4af0ff"
+            glow="74,240,255"
             time="8 PM – 1 AM"
             title="A Ridiculous Escapade"
             sub="Through the Musical Ages"
@@ -99,7 +109,7 @@ export default function Home() {
 
         {/* Footer */}
         <footer className="mt-20 text-center text-xs tracking-[0.2em] uppercase opacity-60">
-          More info coming soon · Holding page v0.1
+          More info coming soon
         </footer>
       </main>
 
@@ -120,25 +130,44 @@ export default function Home() {
 
 function Card({
   color,
+  glow,
   time,
   title,
   sub,
 }: {
   color: string;
+  glow: string;
   time: string;
   title: string;
   sub: string;
 }) {
   return (
     <div
-      className="rounded-2xl border-2 border-[var(--foreground)] p-6 text-black"
-      style={{ background: color }}
+      className="relative rounded-2xl p-6 bg-black/60 backdrop-blur-sm"
+      style={{
+        border: `3px solid ${color}`,
+        boxShadow: `0 0 6px rgba(${glow},0.9), 0 0 18px rgba(${glow},0.55), 0 0 40px rgba(${glow},0.35), inset 0 0 12px rgba(${glow},0.2)`,
+      }}
     >
-      <div className="text-xs tracking-[0.3em] uppercase opacity-80">{time}</div>
-      <div className="mt-2 font-[family-name:var(--font-display)] text-3xl sm:text-4xl uppercase leading-tight">
+      <div
+        className="text-xs tracking-[0.3em] uppercase"
+        style={{
+          color,
+          textShadow: `0 0 4px rgba(${glow},0.9), 0 0 10px rgba(${glow},0.5)`,
+        }}
+      >
+        {time}
+      </div>
+      <div
+        className="mt-2 font-[family-name:var(--font-display)] text-3xl sm:text-4xl uppercase leading-tight"
+        style={{
+          color: "var(--foreground)",
+          textShadow: `0 0 4px rgba(${glow},0.9), 0 0 12px rgba(${glow},0.6)`,
+        }}
+      >
         {title}
       </div>
-      <div className="mt-1 text-sm sm:text-base">{sub}</div>
+      <div className="mt-1 text-sm sm:text-base opacity-85">{sub}</div>
     </div>
   );
 }
