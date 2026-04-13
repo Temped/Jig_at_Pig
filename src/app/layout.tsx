@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
-import { Archivo_Black, Space_Grotesk } from "next/font/google";
+import { Archivo_Black, Monoton, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
 const display = Archivo_Black({
   variable: "--font-display",
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const neon = Monoton({
+  variable: "--font-neon",
   subsets: ["latin"],
   weight: "400",
 });
@@ -27,7 +33,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${display.variable} ${body.variable} h-full antialiased`}
+      className={`${display.variable} ${neon.variable} ${body.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

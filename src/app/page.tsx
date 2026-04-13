@@ -1,6 +1,6 @@
+import Image from "next/image";
 import { Countdown } from "./countdown";
 import { NeonTitle } from "./neon-title";
-import { PigSnout } from "./pig-snout";
 
 const marqueeItems = [
   "AN ADVENTURE THROUGH TIME",
@@ -46,21 +46,32 @@ export default function Home() {
 
       <main className="relative mx-auto max-w-5xl px-6 py-12 sm:py-20">
         {/* Presents line */}
-        <div className="flex items-center justify-center gap-3 text-sm sm:text-base tracking-[0.3em] uppercase opacity-80">
+        <div className="neon-presents flex items-center justify-center gap-4 text-xl sm:text-3xl tracking-[0.12em] uppercase">
           <span>Jig at the Pig</span>
           <span aria-hidden>●</span>
           <span>Presents</span>
         </div>
 
-        {/* Hero + countdown (snout sits behind, lower) */}
+        {/* Hero → schedule wrapper */}
         <div className="relative mt-8">
-          <PigSnout
-            className="pointer-events-none absolute left-1/2 bottom-[15%] -translate-x-1/2 translate-y-[5%] w-[min(140vw,1144px)] text-[var(--accent-pink)] pig-snout-glow wobble z-0"
-          />
-
-          {/* Hero */}
-          <div className="relative z-10">
-            <NeonTitle />
+          {/* Hero with pig snout behind */}
+          <div className="relative">
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center"
+            >
+              <Image
+                src="/pig-snout-v2.png"
+                alt=""
+                width={600}
+                height={470}
+                priority
+                className="w-[min(80vw,560px)] h-auto pig-snout-glow wobble"
+              />
+            </div>
+            <div className="relative z-10">
+              <NeonTitle />
+            </div>
           </div>
 
           {/* Date strip */}
@@ -80,24 +91,24 @@ export default function Home() {
             </div>
             <Countdown />
           </div>
-        </div>
 
-        {/* Schedule cards */}
-        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <Card
-            color="#ffe94a"
-            glow="255,233,74"
-            time="4–6 PM"
-            title="Junior Rave"
-            sub="By Tiny Dancers"
-          />
-          <Card
-            color="#4af0ff"
-            glow="74,240,255"
-            time="8 PM – 1 AM"
-            title="A Ridiculous Escapade"
-            sub="Through the Musical Ages"
-          />
+          {/* Schedule cards */}
+          <div className="relative z-10 mt-16 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <Card
+              color="#ffe94a"
+              glow="255,233,74"
+              time="4–6 PM"
+              title="Junior Rave"
+              sub="By Tiny Dancers"
+            />
+            <Card
+              color="#4af0ff"
+              glow="74,240,255"
+              time="8 PM – 1 AM"
+              title="A Ridiculous Escapade"
+              sub="Through the Musical Ages"
+            />
+          </div>
         </div>
 
         {/* Info row */}
