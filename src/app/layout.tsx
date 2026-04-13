@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Archivo_Black, Monoton, Space_Grotesk } from "next/font/google";
+import { NavBar } from "./nav";
 import "./globals.css";
 
 const display = Archivo_Black({
@@ -35,7 +36,10 @@ export default function RootLayout({
       lang="en"
       className={`${display.variable} ${neon.variable} ${body.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <NavBar />
+        {children}
+      </body>
     </html>
   );
 }
