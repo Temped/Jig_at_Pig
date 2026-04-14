@@ -43,9 +43,10 @@ export default function TicketsPage() {
               A contribution towards putting on the night. 8 PM &ndash; 1 AM,
               18+.
             </div>
-            {/* TODO @edward: replace with real ticket purchase link */}
             <a
-              href="mailto:edwardtemperley@gmail.com?subject=Jig%20at%20the%20Pig%20%E2%80%93%20Ticket%20enquiry"
+              href="https://fixr.co/event/jig-at-the-pig-an-adventure-through-time-tickets-726942319?lang=en-US"
+              target="_blank"
+              rel="noreferrer"
               className="mt-5 inline-flex items-center rounded-full border-2 border-[var(--foreground)] bg-[var(--accent-pink)] px-5 py-2 font-[family-name:var(--font-display)] text-sm uppercase tracking-[0.15em] text-black hover:brightness-110"
             >
               Get Tickets
