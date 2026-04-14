@@ -33,7 +33,7 @@ export default function Home() {
       />
 
       {/* Top marquee */}
-      <div className="border-y-2 border-[var(--foreground)] bg-[var(--accent-lime)] text-black overflow-hidden">
+      <div className="hidden sm:block border-y-2 border-[var(--foreground)] bg-[var(--accent-lime)] text-black overflow-hidden">
         <div className="marquee-track flex whitespace-nowrap py-2 font-[family-name:var(--font-display)] text-lg sm:text-xl">
           {[...marqueeItems, ...marqueeItems, ...marqueeItems].map((item, i) => (
             <span key={i} className="px-6 flex items-center gap-6">
@@ -137,7 +137,7 @@ export default function Home() {
       </main>
 
       {/* Bottom marquee */}
-      <div className="border-y-2 border-[var(--foreground)] bg-[var(--accent-pink)] text-black overflow-hidden">
+      <div className="hidden sm:block border-y-2 border-[var(--foreground)] bg-[var(--accent-pink)] text-black overflow-hidden">
         <div className="marquee-track flex whitespace-nowrap py-2 font-[family-name:var(--font-display)] text-lg sm:text-xl">
           {[...marqueeItems, ...marqueeItems, ...marqueeItems].map((item, i) => (
             <span key={i} className="px-6 flex items-center gap-6">

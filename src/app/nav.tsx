@@ -21,7 +21,7 @@ export function NavBar() {
 
   return (
     <header className="sticky top-0 z-50 border-b-2 border-[var(--foreground)] bg-black/70 backdrop-blur">
-      <div className="mx-auto flex max-w-5xl items-center justify-center gap-4 px-4 py-3 sm:px-6">
+      <div className="mx-auto flex max-w-5xl items-center justify-start sm:justify-center gap-4 px-4 py-3 sm:px-6">
         <nav className="hidden sm:block">
           <ul className="flex items-center gap-3 text-xs sm:text-sm font-[family-name:var(--font-display)] uppercase tracking-[0.15em]">
             {links.map((l) => (
