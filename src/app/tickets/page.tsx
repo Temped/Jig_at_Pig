@@ -29,8 +29,17 @@ export default function TicketsPage() {
               FREE
             </div>
             <div className="mt-2 text-sm opacity-85">
-              4 PM &ndash; 6 PM. All welcome, no booking fee.
+              Afternoon session. All welcome, no booking fee &mdash; but please
+              register for a place.
             </div>
+            <a
+              href="https://fixr.co/event/jig-at-the-pig-an-adventure-through-time-tickets-726942319?lang=en-US"
+              target="_blank"
+              rel="noreferrer"
+              className="mt-5 inline-flex items-center rounded-full border-2 border-[var(--foreground)] bg-[var(--accent-yellow)] px-5 py-2 font-[family-name:var(--font-display)] text-sm uppercase tracking-[0.15em] text-black hover:brightness-110"
+            >
+              Book Kids Tickets
+            </a>
           </div>
           <div className="info-card">
             <div className="text-xs tracking-[0.25em] uppercase opacity-70">
@@ -49,7 +58,7 @@ export default function TicketsPage() {
               rel="noreferrer"
               className="mt-5 inline-flex items-center rounded-full border-2 border-[var(--foreground)] bg-[var(--accent-pink)] px-5 py-2 font-[family-name:var(--font-display)] text-sm uppercase tracking-[0.15em] text-black hover:brightness-110"
             >
-              Get Tickets
+              Book Adult Tickets
             </a>
           </div>
         </section>
