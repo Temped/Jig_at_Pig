@@ -69,11 +69,19 @@ export default function EventPage() {
 
         <section className="mt-14">
           <h2 className="section-title text-xl sm:text-2xl text-center">
-            Watch This Space
+            Watch This
           </h2>
-          {/* TODO @edward: embed YouTube video */}
-          <div className="mt-6 aspect-video w-full rounded-2xl border-2 border-dashed border-[var(--foreground)]/60 bg-black/40 flex items-center justify-center text-sm tracking-[0.2em] uppercase opacity-70">
-            Video coming soon
+          <div className="mt-6 overflow-hidden rounded-2xl border-2 border-[var(--foreground)]">
+            <div className="relative aspect-video">
+              <iframe
+                className="absolute inset-0 h-full w-full"
+                src="https://www.youtube.com/embed/pyzkhu-0yeg"
+                title="Jig at the Pig — An Adventure Through Time"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
           </div>
         </section>
 
