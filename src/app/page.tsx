@@ -45,7 +45,7 @@ export default function Home() {
         </div>
       </div>
 
-      <main className="relative mx-auto max-w-5xl px-6 py-12 sm:py-20">
+      <main className="relative mx-auto max-w-5xl px-6 pt-4 pb-12 sm:pt-8 sm:pb-20">
         {/* Presents line */}
         <div className="neon-presents flex items-center justify-center gap-4 text-xl sm:text-3xl tracking-[0.12em] uppercase">
           <span className="hidden sm:inline">Jig at the Pig</span>
