@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { WhatsAppButton } from "../whatsapp-button";
 
 export const metadata: Metadata = {
   title: "Directions & Camping — Jig at the Pig",
@@ -91,6 +92,8 @@ export default function DirectionsPage() {
             </div>
           </div>
         </section>
+
+        <WhatsAppButton />
       </main>
     </div>
   );

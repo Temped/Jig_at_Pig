@@ -67,7 +67,7 @@ export default function EventPage() {
             <div className="relative aspect-video">
               <iframe
                 className="absolute inset-0 h-full w-full"
-                src="https://www.youtube.com/embed/pyzkhu-0yeg"
+                src="https://www.youtube.com/embed/oAxB-oCkPt0"
                 title="Jig at the Pig — An Adventure Through Time"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"

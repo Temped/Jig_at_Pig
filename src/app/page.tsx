@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Countdown } from "./countdown";
 import { NeonTitle } from "./neon-title";
+import { WhatsAppButton } from "./whatsapp-button";
 
 const marqueeItems = [
   "AN ADVENTURE THROUGH TIME",
@@ -118,7 +119,7 @@ export default function Home() {
               color="#ffe94a"
               glow="255,233,74"
               time="4–6 PM"
-              title="Junior Rave"
+              title="Talent Show & Junior Rave"
               sub="By Tiny Dancers"
             />
             <Card
@@ -137,6 +138,8 @@ export default function Home() {
           <InfoPill title="Camping" body="Camping in Prawle · Bus back to Kingsbridge (TBC)" />
           <InfoPill title="Tickets" body="£10 a ticket · From the 60s to now… and back again" />
         </div>
+
+        <WhatsAppButton />
 
         {/* Footer */}
         <footer className="mt-20 text-center text-xs tracking-[0.2em] uppercase opacity-60">

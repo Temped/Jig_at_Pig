@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { WhatsAppButton } from "../whatsapp-button";
 
 export const metadata: Metadata = {
   title: "Tickets — Jig at the Pig",
@@ -90,15 +91,13 @@ export default function TicketsPage() {
           <div className="mt-6 info-card text-sm sm:text-base">
             <p>
               For the latest updates, join the{" "}
-              <strong>event WhatsApp broadcast group</strong> &mdash; limited
-              posts from organisers in the run-up to the event.
-            </p>
-            {/* TODO @edward: add WhatsApp join link */}
-            <p className="mt-3 opacity-80">
-              Join link coming soon.
+              <strong>event WhatsApp group</strong> &mdash; limited posts from
+              organisers in the run-up to the event.
             </p>
           </div>
         </section>
+
+        <WhatsAppButton />
       </main>
     </div>
   );
