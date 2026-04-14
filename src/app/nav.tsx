@@ -9,7 +9,8 @@ type NavLink = { href: string; label: string; icon?: boolean };
 const links: NavLink[] = [
   { href: "/", label: "Home", icon: true },
   { href: "/event", label: "The Event" },
-  { href: "/kids", label: "Kids Rave" },
+  { href: "/kids-rave", label: "Kids Rave" },
+  { href: "/talent-show", label: "Talent Show" },
   { href: "/tickets", label: "Tickets" },
   { href: "/directions", label: "Directions" },
   { href: "/faq", label: "FAQ" },
