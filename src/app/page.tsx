@@ -48,8 +48,8 @@ export default function Home() {
       <main className="relative mx-auto max-w-5xl px-6 py-12 sm:py-20">
         {/* Presents line */}
         <div className="neon-presents flex items-center justify-center gap-4 text-xl sm:text-3xl tracking-[0.12em] uppercase">
-          <span>Jig at the Pig</span>
-          <span aria-hidden>●</span>
+          <span className="hidden sm:inline">Jig at the Pig</span>
+          <span aria-hidden className="hidden sm:inline">●</span>
           <span>Presents</span>
         </div>
 

@@ -21,7 +21,13 @@ export function NavBar() {
 
   return (
     <header className="sticky top-0 z-50 border-b-2 border-[var(--foreground)] bg-black/70 backdrop-blur">
-      <div className="mx-auto flex max-w-5xl items-center justify-start sm:justify-center gap-4 px-4 py-3 sm:px-6">
+      <div className="relative mx-auto flex max-w-5xl min-h-[56px] items-center justify-center gap-4 px-4 py-3 sm:px-6">
+        <Link
+          href="/"
+          className="neon-brand sm:hidden text-xl tracking-[0.06em]"
+        >
+          Jig at the Pig
+        </Link>
         <nav className="hidden sm:block">
           <ul className="flex items-center gap-3 text-xs sm:text-sm font-[family-name:var(--font-display)] uppercase tracking-[0.15em]">
             {links.map((l) => (
@@ -55,7 +61,7 @@ export function NavBar() {
           aria-expanded={open}
           aria-controls="mobile-nav"
           onClick={() => setOpen((v) => !v)}
-          className="sm:hidden inline-flex h-10 w-10 items-center justify-center rounded-md border-2 border-[var(--foreground)] bg-black/60 text-[var(--foreground)] hover:text-[var(--accent-pink)]"
+          className="sm:hidden absolute left-4 top-1/2 -translate-y-1/2 inline-flex h-10 w-10 items-center justify-center rounded-md border-2 border-[var(--foreground)] bg-black/60 text-[var(--foreground)] hover:text-[var(--accent-pink)]"
         >
           <span className="sr-only">Menu</span>
           <svg
