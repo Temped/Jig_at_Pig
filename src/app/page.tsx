@@ -86,22 +86,14 @@ export default function Home() {
           </div>
 
           {/* Get tickets CTA */}
-          <div className="relative z-10 mt-10 flex flex-wrap justify-center gap-3">
+          <div className="relative z-10 mt-10 flex justify-center">
             <a
               href="https://fixr.co/event/jig-at-the-pig-an-adventure-through-time-tickets-726942319?lang=en-US"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center rounded-full border-2 border-[var(--foreground)] bg-[var(--accent-pink)] px-8 py-3 font-[family-name:var(--font-display)] text-base sm:text-lg uppercase tracking-[0.15em] text-black hover:brightness-110"
             >
-              Adult Tickets
-            </a>
-            <a
-              href="https://fixr.co/event/jig-at-the-pig-an-adventure-through-time-tickets-726942319?lang=en-US"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center rounded-full border-2 border-[var(--foreground)] bg-[var(--accent-yellow)] px-8 py-3 font-[family-name:var(--font-display)] text-base sm:text-lg uppercase tracking-[0.15em] text-black hover:brightness-110"
-            >
-              Kids Tickets
+              Book Tickets
             </a>
           </div>
 

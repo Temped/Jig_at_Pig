@@ -25,13 +25,24 @@ export default function KidsPage() {
           </p>
         </div>
 
-        {/* TODO @edward: wire up form submission (server action / API route) — currently mailto placeholder */}
         <form
           className="mt-12 space-y-10"
-          action="mailto:jigatpig@gmail.com?subject=Kids%20Talent%20Show%20Application"
+          action="https://formsubmit.co/jigatpig@gmail.com"
           method="post"
-          encType="text/plain"
         >
+          <input
+            type="hidden"
+            name="_subject"
+            value="Kids Talent Show Application — Jig at the Pig"
+          />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input
+            type="hidden"
+            name="_next"
+            value="https://jigatpig.com/talent-show/thank-you"
+          />
+          <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
           <FormSection title="Child Details" emoji="👤">
             <Field label="Full name" name="child_name" required />
             <div className="grid gap-4 sm:grid-cols-2">
