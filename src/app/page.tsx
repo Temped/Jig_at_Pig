@@ -54,7 +54,7 @@ export default function Home() {
         </div>
 
         {/* Hero → schedule wrapper */}
-        <div className="relative mt-8">
+        <div className="relative mt-20 sm:mt-8">
           {/* Hero with pig snout behind */}
           <div className="relative">
             <div
