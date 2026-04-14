@@ -75,6 +75,39 @@ export default function Home() {
             </div>
           </div>
 
+          {/* Event blurb */}
+          <div className="relative z-10 mt-10 mx-auto max-w-5xl text-center space-y-6 sm:space-y-8 sm:w-[130%] sm:max-w-none sm:-mx-[15%]">
+            <p className="font-[family-name:var(--font-display)] text-2xl sm:text-4xl uppercase leading-tight text-[var(--foreground)] [text-shadow:_0_0_6px_rgba(255,61,139,0.9),_0_0_18px_rgba(255,61,139,0.55)]">
+              Welcome in the summer
+              <br />
+              with a{" "}
+              <span className="text-[var(--accent-pink)]">
+                good ol&apos; fashioned knees-up
+              </span>
+            </p>
+            <p className="font-[family-name:var(--font-display)] text-2xl sm:text-4xl uppercase leading-tight text-[var(--accent-yellow)] [text-shadow:_0_0_6px_rgba(255,233,74,0.95),_0_0_20px_rgba(255,233,74,0.55)]">
+              Just because
+            </p>
+
+            <p className="font-[family-name:var(--font-display)] text-xl sm:text-3xl uppercase leading-tight text-[var(--foreground)] [text-shadow:_0_0_6px_rgba(74,240,255,0.85),_0_0_18px_rgba(74,240,255,0.5)]">
+              A DJ-led tour through the{" "}
+              <span className="text-[var(--accent-cyan)]">musical ages</span> &mdash;
+              <br className="hidden sm:inline" /> 40s to today,{" "}
+              <span className="text-[var(--accent-pink)]">
+                New Year&apos;s Eve
+              </span>{" "}
+              every decade.
+            </p>
+
+            <p className="font-[family-name:var(--font-display)] text-3xl sm:text-5xl uppercase leading-none text-[var(--accent-yellow)] [text-shadow:_0_0_6px_rgba(255,233,74,0.95),_0_0_20px_rgba(255,233,74,0.6),_0_0_42px_rgba(255,233,74,0.35)]">
+              Dress as your favourite era
+            </p>
+
+            <div className="inline-block rounded-full border-2 border-[var(--accent-lime)] bg-black/60 px-6 py-3 font-[family-name:var(--font-display)] text-base sm:text-xl uppercase tracking-[0.1em] text-[var(--accent-lime)] [text-shadow:_0_0_6px_rgba(198,255,61,0.9),_0_0_16px_rgba(198,255,61,0.55)] shadow-[0_0_14px_rgba(198,255,61,0.5),0_0_32px_rgba(198,255,61,0.25)]">
+              + free kids&apos; rave &amp; talent show
+            </div>
+          </div>
+
           {/* Date strip */}
           <div className="relative z-10 mt-10 flex flex-col items-center gap-2">
             <div className="inline-flex items-center gap-4 rounded-full border-2 border-[var(--foreground)] bg-[var(--accent-pink)] px-6 py-2 text-black font-[family-name:var(--font-display)] text-xl sm:text-2xl">
