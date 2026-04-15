@@ -166,17 +166,12 @@ export default function Home() {
 
         {/* Info row */}
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <InfoPill title="Dress Code" body="Dress through the ages (pig-related for bonus points)" />
+          <InfoPill title="Dress Code" body="Dress Through the Ages (pig-related for bonus points)" />
           <InfoPill title="Camping" body="Camping in Prawle · Bus back to Kingsbridge (TBC)" />
           <InfoPill title="Tickets" body="£10 a ticket · From the 60s to now… and back again" />
         </div>
 
         <WhatsAppButton />
-
-        {/* Footer */}
-        <footer className="mt-20 text-center text-xs tracking-[0.2em] uppercase opacity-60">
-          More info coming soon
-        </footer>
       </main>
 
       {/* Bottom marquee */}
