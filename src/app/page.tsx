@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Countdown } from "./countdown";
 import { NeonTitle } from "./neon-title";
 import { WhatsAppButton } from "./whatsapp-button";
@@ -141,25 +142,31 @@ export default function Home() {
           {/* Schedule cards */}
           <div className="relative z-10 mt-16 grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Card
+              href="/kids-rave"
               color="#ffe94a"
               glow="255,233,74"
               time="4–6 PM"
               title="Talent Show & Junior Rave"
               sub="By Tiny Dancers"
+              image="/tiny-dancers.png"
+              imageAlt="Tiny Dancers — Family Rave"
             />
             <Card
+              href="/event"
               color="#4af0ff"
               glow="74,240,255"
               time="8 PM – 1 AM"
               title="A Ridiculous Escapade"
-              sub="Through the Musical Ages"
+              sub="Through the Musical Ages · Headlined by Mango Django"
+              image="/mango-django.gif"
+              imageAlt="Mango Django"
             />
           </div>
         </div>
 
         {/* Info row */}
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <InfoPill title="Dress Code" body="Fancy dress essential (pig-related mischief encouraged)" />
+          <InfoPill title="Dress Code" body="Dress through the ages (pig-related for bonus points)" />
           <InfoPill title="Camping" body="Camping in Prawle · Bus back to Kingsbridge (TBC)" />
           <InfoPill title="Tickets" body="£10 a ticket · From the 60s to now… and back again" />
         </div>
@@ -188,21 +195,28 @@ export default function Home() {
 }
 
 function Card({
+  href,
   color,
   glow,
   time,
   title,
   sub,
+  image,
+  imageAlt,
 }: {
+  href: string;
   color: string;
   glow: string;
   time: string;
   title: string;
   sub: string;
+  image?: string;
+  imageAlt?: string;
 }) {
   return (
-    <div
-      className="relative rounded-2xl p-6 bg-black/60 backdrop-blur-sm"
+    <Link
+      href={href}
+      className="relative flex flex-col rounded-2xl p-6 bg-black/60 backdrop-blur-sm transition hover:brightness-110 hover:-translate-y-0.5"
       style={{
         border: `3px solid ${color}`,
         boxShadow: `0 0 6px rgba(${glow},0.9), 0 0 18px rgba(${glow},0.55), 0 0 40px rgba(${glow},0.35), inset 0 0 12px rgba(${glow},0.2)`,
@@ -227,7 +241,24 @@ function Card({
         {title}
       </div>
       <div className="mt-1 text-sm sm:text-base opacity-85">{sub}</div>
-    </div>
+      {image && (
+        <div
+          className="mt-auto pt-4"
+        >
+          <div
+            className="relative overflow-hidden rounded-xl bg-black aspect-[5/3]"
+            style={{ border: `2px solid ${color}` }}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={image}
+              alt={imageAlt ?? ""}
+              className="absolute inset-0 w-full h-full object-contain"
+            />
+          </div>
+        </div>
+      )}
+    </Link>
   );
 }
 

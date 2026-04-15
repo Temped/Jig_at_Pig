@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "The Event — Jig at the Pig",
@@ -86,27 +87,47 @@ export default function EventPage() {
               <div className="text-xs tracking-[0.25em] uppercase opacity-70">
                 Kids&apos; Rave
               </div>
-              <div className="mt-1 font-[family-name:var(--font-display)] text-xl sm:text-2xl uppercase">
+              <div className="mt-1 font-[family-name:var(--font-display)] text-xl sm:text-2xl uppercase text-[var(--accent-yellow)] [text-shadow:_0_0_6px_rgba(255,233,74,0.9),_0_0_18px_rgba(255,233,74,0.5)]">
                 Tiny Dancers
+              </div>
+              <div className="mt-2 text-sm opacity-90 italic">
+                The biggest little party in town.
+              </div>
+              <div className="mt-4 overflow-hidden rounded-xl border-2 border-[var(--accent-yellow)]">
+                <Image
+                  src="/tiny-dancers.png"
+                  alt="Tiny Dancers — Family Rave"
+                  width={600}
+                  height={360}
+                  className="block w-full h-auto"
+                />
               </div>
               <a
                 href="https://www.tinydancersevents.com"
                 target="_blank"
                 rel="noreferrer"
-                className="mt-2 inline-block text-sm underline opacity-85 hover:opacity-100"
+                className="mt-3 inline-block text-sm underline opacity-85 hover:opacity-100"
               >
                 tinydancersevents.com
               </a>
             </div>
             <div className="info-card">
               <div className="text-xs tracking-[0.25em] uppercase opacity-70">
-                Main Event DJs
+                Headliner
               </div>
-              <div className="mt-1 font-[family-name:var(--font-display)] text-xl sm:text-2xl uppercase">
-                Announcements soon
+              <div className="mt-1 font-[family-name:var(--font-display)] text-xl sm:text-2xl uppercase text-[var(--accent-pink)] [text-shadow:_0_0_6px_rgba(255,61,139,0.85),_0_0_18px_rgba(255,61,139,0.5)]">
+                Mango Django
               </div>
-              <div className="mt-2 text-sm opacity-80">
-                Lineup confirmations incoming.
+              <div className="mt-2 text-sm opacity-90 italic">
+                The floor-filling maestro returns by popular demand.
+              </div>
+              <div className="mt-4 overflow-hidden rounded-xl border-2 border-[var(--accent-pink)]">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/mango-django.gif"
+                  alt="Mango Django"
+                  className="block w-full h-auto"
+                />
               </div>
             </div>
           </div>
