@@ -78,7 +78,7 @@ export default function DirectionsPage() {
             </div>
             <div className="mt-2 text-sm sm:text-base">
               Interested in the bus? Please add your name to this first come,
-              first served return bus from KB to Prawle via Charleton,
+              first served, return bus from KB to Prawle via Charleton,
               Chillington and Stokenham.
             </div>
             <div className="mt-4 flex justify-center">
