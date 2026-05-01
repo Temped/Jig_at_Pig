@@ -77,8 +77,19 @@ export default function DirectionsPage() {
               Bus to Kingsbridge
             </div>
             <div className="mt-2 text-sm sm:text-base">
-              A bus to and from Kingsbridge is planned &mdash; TBC on the event
-              WhatsApp group.
+              Interested in the bus? Please add your name to this first come,
+              first served return bus from KB to Prawle via Charleton,
+              Chillington and Stokenham.
+            </div>
+            <div className="mt-4 flex justify-center">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSchOzsKw6biBHMx4WlBFOKQ1g-deRgCgmqWziTfDhIIQoU6vg/viewform"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center rounded-full border-2 border-[var(--foreground)] bg-[var(--accent-cyan)] px-5 py-2 font-[family-name:var(--font-display)] text-sm uppercase tracking-[0.15em] text-black hover:brightness-110"
+              >
+                Sign up for the bus
+              </a>
             </div>
           </div>
           <div className="info-card">
