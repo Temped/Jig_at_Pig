@@ -122,12 +122,17 @@ export default function Home() {
           {/* Get tickets CTA */}
           <div className="relative z-10 mt-10 flex justify-center">
             <a
-              href="https://fixr.co/event/jig-at-the-pig-an-adventure-through-time-tickets-726942319?lang=en-US"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSeoCArNp6tVXjZYqkiIuZvsEQAAElpsU8nvNYRzP530RJHLVw/viewform?usp=header"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center rounded-full border-2 border-[var(--foreground)] bg-[var(--accent-pink)] px-8 py-3 font-[family-name:var(--font-display)] text-base sm:text-lg uppercase tracking-[0.15em] text-black hover:brightness-110"
+              className="inline-flex max-w-md flex-col items-center rounded-2xl border-2 border-[var(--foreground)] bg-[var(--accent-pink)] px-6 py-3 text-center font-[family-name:var(--font-display)] text-black hover:brightness-110"
             >
-              Book Tickets
+              <span className="text-base sm:text-lg uppercase tracking-[0.15em]">
+                Second Ticket Release
+              </span>
+              <span className="mt-1 text-xs sm:text-sm">
+                Register your name for a second ticket release
+              </span>
             </a>
           </div>
 
