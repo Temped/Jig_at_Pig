@@ -34,15 +34,12 @@ export default function TicketsPage() {
               register for a place.
             </div>
             <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSeoCArNp6tVXjZYqkiIuZvsEQAAElpsU8nvNYRzP530RJHLVw/viewform?usp=header"
+              href="https://fixr.co/event/jig-at-the-pig-an-adventure-through-time-tickets-726942319?lang=en-US"
               target="_blank"
               rel="noreferrer"
-              className="mt-5 inline-flex flex-col items-center rounded-2xl border-2 border-[var(--foreground)] bg-[var(--accent-yellow)] px-5 py-2 text-center font-[family-name:var(--font-display)] text-black hover:brightness-110"
+              className="mt-5 inline-flex items-center rounded-full border-2 border-[var(--foreground)] bg-[var(--accent-yellow)] px-5 py-2 font-[family-name:var(--font-display)] text-sm uppercase tracking-[0.15em] text-black hover:brightness-110"
             >
-              <span className="text-sm uppercase tracking-[0.15em]">
-                Second Ticket Release
-              </span>
-              <span className="mt-1 text-xs">Register your name</span>
+              Book Kids Tickets
             </a>
           </div>
           <div className="info-card">
