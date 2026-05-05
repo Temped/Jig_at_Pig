@@ -131,7 +131,7 @@ export default function Home() {
                 Second Ticket Release
               </span>
               <span className="mt-1 text-xs sm:text-sm">
-                Register your name for a second ticket release
+                Register your name
               </span>
             </a>
           </div>
