@@ -27,22 +27,30 @@ export default function KidsPage() {
 
         <form
           className="mt-12 space-y-10"
-          action="https://formsubmit.co/jigatpig@gmail.com"
+          action="https://api.web3forms.com/submit"
           method="post"
         >
           <input
             type="hidden"
-            name="_subject"
-            value="Kids Talent Show Application — Jig at the Pig"
+            name="access_key"
+            value="c1e18a0d-10fb-4670-b3ea-573d1e57ac65"
           />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_template" value="table" />
           <input
             type="hidden"
-            name="_next"
+            name="subject"
+            value="Kids Talent Show Application — Jig at the Pig"
+          />
+          <input
+            type="hidden"
+            name="from_name"
+            value="Jig at the Pig — Talent Show"
+          />
+          <input
+            type="hidden"
+            name="redirect"
             value="https://jigatpig.com/talent-show/thank-you"
           />
-          <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
+          <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" style={{ display: "none" }} />
           <FormSection title="Child Details" emoji="👤">
             <Field label="Full name" name="child_name" required />
             <div className="grid gap-4 sm:grid-cols-2">
