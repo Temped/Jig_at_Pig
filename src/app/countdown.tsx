@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 
-// 6th June 2026, 4pm BST (junior rave kickoff)
-const TARGET = new Date("2026-06-06T15:00:00Z").getTime();
+// 6th June 2026, 12pm BST (doors / event open)
+const TARGET = new Date("2026-06-06T11:00:00Z").getTime();
 
 function diff(now: number) {
   const d = Math.max(0, TARGET - now);
