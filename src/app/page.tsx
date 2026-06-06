@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Countdown } from "./countdown";
 import { NeonTitle } from "./neon-title";
 import { WhatsAppButton } from "./whatsapp-button";
 
@@ -122,26 +121,25 @@ export default function Home() {
           {/* Get tickets CTA */}
           <div className="relative z-10 mt-10 flex justify-center">
             <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSeoCArNp6tVXjZYqkiIuZvsEQAAElpsU8nvNYRzP530RJHLVw/viewform?usp=header"
+              href="https://fixr.co/event/jig-at-the-pig-an-adventure-through-time-tickets-726942319/tickets?lang=en-US"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex max-w-md flex-col items-center rounded-2xl border-2 border-[var(--foreground)] bg-[var(--accent-pink)] px-6 py-3 text-center font-[family-name:var(--font-display)] text-black hover:brightness-110"
+              className="inline-flex items-center rounded-full border-2 border-[var(--foreground)] bg-[var(--accent-pink)] px-8 py-3 font-[family-name:var(--font-display)] text-base sm:text-lg uppercase tracking-[0.15em] text-black hover:brightness-110"
             >
-              <span className="text-base sm:text-lg uppercase tracking-[0.15em]">
-                Second Ticket Release
-              </span>
-              <span className="mt-1 text-xs sm:text-sm">
-                Register your name
-              </span>
+              Buy Tickets
             </a>
           </div>
 
-          {/* Countdown */}
-          <div className="relative z-10 mt-12 mx-auto max-w-2xl">
-            <div className="text-center text-xs tracking-[0.3em] uppercase opacity-70 mb-4">
-              Time until the time machine departs
+          {/* Doors-open ticker (replaces countdown on event day) */}
+          <div className="relative z-10 mt-12 -mx-6 border-y-2 border-[var(--foreground)] bg-black text-[var(--foreground)] overflow-hidden">
+            <div className="marquee-track flex whitespace-nowrap py-3 font-[family-name:var(--font-display)] text-xl sm:text-2xl uppercase tracking-[0.05em]">
+              {Array.from({ length: 12 }).map((_, i) => (
+                <span key={i} className="px-8 flex items-center gap-8">
+                  Doors Open 8 PM
+                  <span aria-hidden>★</span>
+                </span>
+              ))}
             </div>
-            <Countdown />
           </div>
 
           {/* Schedule cards */}
